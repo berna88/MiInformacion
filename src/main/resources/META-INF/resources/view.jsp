@@ -1,5 +1,5 @@
-<%@ include file="/init.jsp" %>
+<%@ include file="init.jsp" %>
 
-<p>
-	<b><liferay-ui:message key="portletinformacion.caption"/></b>
-</p>
+<link rel="stylesheet" type="text/css" href='<%=request.getContextPath()+"/css/banner.css"%>'>
+
+<%@ include file="jsp/header/banner.jsp" %>
