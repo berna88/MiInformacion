@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+.logo{
+	background: #100001;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.logo img{
+	float: right;
+    width: 12rem;
+    height: auto;
+    border-radius: 10px;
+}
