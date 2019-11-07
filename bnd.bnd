@@ -1,0 +1,10 @@
+Bundle-Name: MiInformacion
+Bundle-SymbolicName: com.consistent.cuervo.miinformacion.portlet
+Bundle-Version: 1.0.0
+Export-Package: com.consistent.cuervo.miinformacion.portlet.constants
+-contract: JavaPortlet,JavaServlet
+-jsp: *.jsp,*.jspf
+-plugin.jsp: com.liferay.ant.bnd.jsp.JspAnalyzerPlugin
+-plugin.resourcebundle: com.liferay.ant.bnd.resource.bundle.ResourceBundleLoaderAnalyzerPlugin
+-plugin.sass: com.liferay.ant.bnd.sass.SassAnalyzerPlugin
+-sass: *
