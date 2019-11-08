@@ -1,3 +1,4 @@
+<%@page import="com.consistent.cuervo.miinformacion.portlet.models.Trabajador"%>
 <%@ include file="init.jsp" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -9,6 +10,9 @@
 <link rel="stylesheet" type="text/css" href='<%=request.getContextPath()+"/css/general.css"%>'>
 
 <script src='<%=request.getContextPath()+"/js/2.8.0/Chart.min.js"%>'></script>
+<%
+Trabajador usuario = (Trabajador) request.getAttribute("trabajador");
+%>
 
 <%@ include file="jsp/header/banner.jsp" %>
 <body id="miInformacion" class="container">
