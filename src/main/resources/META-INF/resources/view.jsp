@@ -13,7 +13,6 @@
 <%
 Trabajador usuario = (Trabajador) request.getAttribute("trabajador");
 %>
-
 <%@ include file="jsp/header/banner.jsp" %>
 <body id="miInformacion" class="container">
 	<section class="row">

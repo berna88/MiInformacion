@@ -1,8 +1,10 @@
 package com.consistent.cuervo.miinformacion.portlet.models;
 
+import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.model.User;
+import com.liferay.portal.kernel.theme.ThemeDisplay;
 
 public class Trabajador {
 	private static Log log = LogFactoryUtil.getLog(Trabajador.class.getName());
@@ -14,9 +16,25 @@ public class Trabajador {
 	private String centroDeCostos;
 	private String centroDeTrabajo;
 	private String fechaDeIngreso;
+	private String imagenPerfil;
+	private ThemeDisplay themeDisplay;
 	private User user;
 	
 	
+	public String getImagenPerfil() {
+		try {
+			imagenPerfil = user.getPortraitURL(themeDisplay);
+		} catch (PortalException e) {
+			// TODO Auto-generated catch block
+			log.error("method:getImagenPerfil"+e.getMessage());
+			imagenPerfil = "";
+			e.printStackTrace();
+		}
+		return imagenPerfil;
+	}
+	public void setImagenPerfil(String imagenPerfil) {
+		this.imagenPerfil = imagenPerfil;
+	}
 	public User getUser() {
 		return user;
 	}
@@ -141,8 +159,9 @@ public class Trabajador {
 		this.fechaDeIngreso = fechaDeIngreso;
 	}
 	
-	public Trabajador(User user) {
+	public Trabajador(User user,ThemeDisplay themeDisplay) {
 		this.user = user;
+		this.themeDisplay = themeDisplay;
 	}
 	public Trabajador() {
 		this.nombres = "";

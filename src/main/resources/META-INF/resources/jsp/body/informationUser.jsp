@@ -8,7 +8,7 @@
 		<div class="nombre">
 			<section class="row">
 				<article class="col-12 col-sm-12 col-md-12 col-lg-5 col-xs-5">
-					<img id="img-perfil" alt="" src='<%=request.getContextPath()+"/img/icon_igrow.png"%>'>
+					<img id="img-perfil" alt="" src='<%=usuario.getImagenPerfil() %>'>
 				</article>
 				<article class="col-12 col-sm-12 col-md-12 col-lg-7 col-xs-7">
 					<hgroup id="nombres">
