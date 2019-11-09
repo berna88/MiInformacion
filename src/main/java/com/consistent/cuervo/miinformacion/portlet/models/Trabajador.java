@@ -29,6 +29,11 @@ public class Trabajador {
 			log.error("method:getImagenPerfil"+e.getMessage());
 			imagenPerfil = "";
 			e.printStackTrace();
+		}catch (Exception e) {
+			// TODO: handle exception
+			log.error("method:getImagenPerfil"+e.getMessage());
+			imagenPerfil = "";
+			e.printStackTrace();
 		}
 		return imagenPerfil;
 	}
